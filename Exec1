@@ -1,0 +1,15 @@
+//Para executar o código, entrar no site https://thebookofshaders.com/03/ e largar o código em qualquer lacuna de execução de código.
+// Exercício 1: Fazer uma tela que começe na cor preta e transicione para o azul gradualmente:
+
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+uniform float u_time;
+
+void main() {
+	vec2 st = gl_FragCoord.xy/(u_resolution);
+	gl_FragColor = vec4(0.0,0.0,cos(u_time),1.0);
+}
